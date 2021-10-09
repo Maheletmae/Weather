@@ -10,6 +10,7 @@
       integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" class="css" />
     <title>Weather</title>
   </head>
@@ -22,7 +23,7 @@
             <img src="src\logo.png" alt="shecodes" />
           </a>
           <div class="row">
-            <form>
+            <form id="formm">
               <input
                 type="text"
                 class="col-9"
@@ -38,15 +39,24 @@
           </div>
           <div class="row weatherinfo">
             <div class="col-7">
-              <span class="city">New York</span>
+              <h1 class="city">New York</h1>
               <ul>
-                <li>Saturday 09:30, overcast clouds</li>
-                <li>Humidity: 77%, Wind: 6.69km/h</li>
+                <li>
+                  <span id="todaysdate">Saturday 09:30</span>, overcast
+                  <span class="desc">clouds</span>
+                </li>
+                <li>
+                  Humidity: <span id="humidity">77</span>%, Wind:
+                  <span id="wind">6.69</span>km/h
+                </li>
               </ul>
             </div>
             <div class="col-5">
               <span class="temp">17</span>
-              <span class="unit">°C</span>
+              <span class="unit">
+                <span class="celcius">°C</span> |
+                <span class="fahrenheit">°F</span>
+              </span>
             </div>
           </div>
           <p>
@@ -60,5 +70,6 @@
         </div>
       </div>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
