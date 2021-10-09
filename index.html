@@ -10,6 +10,7 @@
       integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="src/style.css" class="css" />
     <title>Weather</title>
   </head>
 
@@ -17,27 +18,44 @@
     <div class="container">
       <div class="card">
         <div class="card-body">
-          <img
-            src="C:\Users\mahel\Downloads\Courses\SheCodes\PLUS\Weather\src\logo.png"
-            alt="shecodes"
-          />
-          <form>
-            <input type="text" placeholder="Enter a city.." id="inputform" />
-            <input type="button" value="Search" />
-          </form>
+          <a href="https://www.shecodes.io/" class="logo">
+            <img src="src\logo.png" alt="shecodes" />
+          </a>
           <div class="row">
-            <div class="col-6">
-              New York
+            <form>
+              <input
+                type="text"
+                class="col-9"
+                placeholder="Enter a city.."
+                id="inputform"
+              />
+              <input
+                type="submit"
+                class="btn btn-primary col-2"
+                value="Search"
+              />
+            </form>
+          </div>
+          <div class="row weatherinfo">
+            <div class="col-7">
+              <span class="city">New York</span>
               <ul>
                 <li>Saturday 09:30, overcast clouds</li>
                 <li>Humidity: 77%, Wind: 6.69km/h</li>
               </ul>
             </div>
-            <div class="col-6">17°C</div>
+            <div class="col-5">
+              <span class="temp">17</span>
+              <span class="unit">°C</span>
+            </div>
           </div>
           <p>
-            This project was coded by Mahelet Seleshi and is open-sourced on
-            GitHub and hosted on Netlify
+            This project was coded by
+            <span class="name">Mahelet Seleshi</span> and is
+            <a href="https://github.com/Maheletmae/Weather">
+              open-sourced on GitHub</a
+            >
+            and <a href="#"> hosted on Netlify</a>
           </p>
         </div>
       </div>

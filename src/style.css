@@ -1,0 +1,74 @@
+body {
+  font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background: #347474;
+}
+.card {
+  margin: 20px auto;
+  display: block;
+  max-width: fit-content;
+  background: white;
+  border-radius: 20px;
+}
+img {
+  max-width: 200px;
+  display: block;
+  margin: 10px;
+}
+.city {
+  font-size: 35px;
+  font-weight: bold;
+  color: #35495e;
+}
+form {
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 20px;
+}
+#inputform {
+  background: #f9f7fe;
+  border: none;
+  border-radius: 6px;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  padding: 7px 20px;
+}
+.weatherinfo {
+  padding: 20px;
+}
+.col-5 {
+  padding-top: 10px;
+}
+.temp {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1;
+}
+.unit {
+  font-size: 28px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -34px;
+}
+p {
+  margin: 0;
+  font-size: small;
+}
+a {
+  text-decoration: none;
+  color: #ff7e67;
+}
+a:hover {
+  transition: all 200ms ease-in-out;
+  text-decoration: underline;
+}
+.name {
+  font-weight: bold;
+}
+.btn {
+  background: #42b883;
+  border: none;
+}
