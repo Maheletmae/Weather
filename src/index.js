@@ -59,17 +59,24 @@ searchForm.addEventListener("submit", handleSubmit);
 
 //Degree's unit change
 
-function changedegreeF(event) {
+function changedegreetoF(event) {
   event.preventDefault();
   let number = document.querySelector(".temp");
-  number.innerHTML = 66;
+  celcius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let fahrenheitt = (response.data.main.temp * 9) / 5 + 32;
+
+  number.innerHTML = Math.round(fahrenheitt);
 }
-function changedegreeC(event) {
+function changedegreetoC(event) {
   event.preventDefault();
+  celcius.classList.add("active");
+  fahrenheit.classList.remove("active");
   let number = document.querySelector(".temp");
-  number.innerHTML = 19;
+  number.innerHTML = Math.round(celciustemp);
 }
+let celciustemp = null;
 let touchlinkC = document.querySelector(".celcius");
 let touchlinkF = document.querySelector(".fahrenheit");
-touchlinkC.addEventListener("click", changedegreeC);
-touchlinkF.addEventListener("click", changedegreeF);
+touchlinkC.addEventListener("click", changedegreetoC);
+touchlinkF.addEventListener("click", changedegreetoF);

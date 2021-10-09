@@ -75,3 +75,11 @@ a:hover {
   background: #42b883;
   border: none;
 }
+.active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
