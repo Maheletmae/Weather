@@ -29,6 +29,36 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+// Small temperatures
+
+function displaysmalltemp(event) {
+  let forecast = document.querySelector(".forecasting");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML /* what we had before + */ +
+      `
+    <div class="row">
+        <div class="col-2">
+            <div class="smalldate">${day}</div>
+            <img
+                src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+                alt="smallicon"
+                class="smallicon"
+            />
+            <div class="smalltemp">
+                <span class="smalltempmax">18° </span>
+                <span class="smalltempmin">12°</span>
+            </div>
+        </div>
+    </div>
+    `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecast.innerHTML = forecastHTML;
+}
 
 //Temperature depending on city
 
@@ -42,7 +72,7 @@ function showtemp(response) {
     response.data.wind.speed
   );
   document.querySelector(".desc").innerHTML = response.data.weather[0].main;
-
+  forecast();
   let celciustemp = response.data.main.temp;
 
   //Icon picture
