@@ -49,11 +49,11 @@ form {
   color: #35495e;
 }
 .unit {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
   position: relative;
   line-height: 1;
-  top: -38px;
+  top: -36px;
 }
 p {
   margin: 0;
@@ -106,4 +106,12 @@ li {
 }
 .smallicon {
   margin: 0px;
+}
+#wind,
+#humidity {
+  color: #42b883;
+}
+strong {
+  color: #42b883;
+  font-weight: lighter;
 }
