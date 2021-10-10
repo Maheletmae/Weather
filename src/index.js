@@ -99,8 +99,7 @@ function showtemp(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  getforecastdata;
-  response.data.coord;
+  getforecastdata(response.data.coord);
 }
 
 function cityinput(city) {
@@ -115,27 +114,3 @@ function handleSubmit(event) {
 }
 let searchForm = document.querySelector("#formm");
 searchForm.addEventListener("submit", handleSubmit);
-
-//Degree's unit change
-
-function changedegreetoF(event) {
-  event.preventDefault();
-  let number = document.querySelector(".temp");
-  celcius.classList.remove("active");
-  fahrenheit.classList.add("active");
-  let fahrenheitt = (celciustemp * 9) / 5 + 32;
-
-  number.innerHTML = Math.round(fahrenheitt);
-}
-function changedegreetoC(event) {
-  event.preventDefault();
-  celcius.classList.add("active");
-  fahrenheit.classList.remove("active");
-  let number = document.querySelector(".temp");
-  number.innerHTML = Math.round(celciustemp);
-}
-let celciustemp = null;
-let touchlinkC = document.querySelector(".celcius");
-let touchlinkF = document.querySelector(".fahrenheit");
-touchlinkC.addEventListener("click", changedegreetoC);
-touchlinkF.addEventListener("click", changedegreetoF);
