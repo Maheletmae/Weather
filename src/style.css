@@ -60,11 +60,11 @@ p {
   font-size: small;
   padding: 10px;
 }
-a {
+.plink {
   text-decoration: none;
   color: #ff7e67;
 }
-a:hover {
+.plink:hover {
   transition: all 200ms ease-in-out;
   text-decoration: underline;
 }
@@ -77,7 +77,7 @@ a:hover {
 }
 .active {
   color: rgb(33, 33, 33);
-  cursor: default;
+  cursor: pointer;
 }
 
 .active:hover {

@@ -43,6 +43,8 @@ function showtemp(response) {
   );
   document.querySelector(".desc").innerHTML = response.data.weather[0].main;
 
+  let celciustemp = response.data.main.temp;
+
   //Icon picture
   let iconn = document.querySelector(".icon");
   iconn.setAttribute(
@@ -80,7 +82,7 @@ function changedegreetoC(event) {
   celcius.classList.add("active");
   fahrenheit.classList.remove("active");
   let number = document.querySelector(".temp");
-  number.innerHTML = Math.round(celciustemp);
+  number.innerHTML = Math.round(response.data.main.temp);
 }
 let celciustemp = null;
 let touchlinkC = document.querySelector(".celcius");
